@@ -1,0 +1,15 @@
+{
+  "name": "microproject",
+  "version": "1.0.0",
+  "description": "Microproject",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "lalithakashyap",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
+
