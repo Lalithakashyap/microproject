@@ -16,11 +16,60 @@ jobs:
     - name: Install SSH key
       uses: webfactory/ssh-agent@v0.5.3
       with:
-        ssh-private-key: ${{ secrets.PRODUCTION_SSH_KEY }}
+        ssh-private-key: -----BEGIN OPENSSH PRIVATE KEY-----
+            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
+            -----END OPENSSH PRIVATE KEY-----
+            
       
     - name: Deploy code
       run: |
-        ssh -o StrictHostKeyChecking=no -p ${{ secrets.PRODUCTION_PORT }} ${{ secrets.PRODUCTION_USERNAME }}@${{ secrets.PRODUCTION_HOST }} "
+        ssh -o StrictHostKeyChecking=no -p 22 lalit@$192.168.29.98 "
           cd /path/to/your/project &&
           git pull origin main &&
           npm install &&
