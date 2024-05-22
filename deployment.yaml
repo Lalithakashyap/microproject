@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: microproject-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: microproject
+  template:
+    metadata:
+      labels:
+        app: microproject
+    spec:
+      containers:
+      - name: microproject
+        image: lalithakashyap30/microproject:latest
+        ports:
+        - containerPort: 3000
