@@ -3,10 +3,12 @@ kind: Service
 metadata:
   name: microproject-service
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: microproject
   ports:
     - protocol: TCP
       port: 80
       targetPort: 3000
+      nodePort: 31103
+

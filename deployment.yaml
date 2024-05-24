@@ -17,3 +17,4 @@ spec:
         image: lalithakashyap30/microproject:latest
         ports:
         - containerPort: 3000
+          
