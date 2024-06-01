@@ -26,15 +26,15 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build(DOCKER_IMAGE)
+                    docker.build("${env.DOCKER_IMAGE}")
                 }
             }
         }
         stage('Push Docker Image') {
             steps {
                 script {
-                    docker.withRegistry('', 'dockerhub-credentials') {
-                        docker.image(DOCKER_IMAGE).push('latest')
+                    docker.withRegistry('https://index.docker.io/v1/', 'd0007677-f948-4f69-a27b-fd0f6eee42fc') {
+                        docker.image("${env.DOCKER_IMAGE}").push('latest')
                     }
                 }
             }
@@ -42,14 +42,14 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 script {
-                    sh "kubectl apply -f kubernetes/deployment.yaml --namespace ${KUBE_NAMESPACE}"
+                    sh "kubectl apply -f kubernetes/deployment.yaml --namespace ${env.KUBE_NAMESPACE}"
                 }
             }
         }
         stage('Verify Deployment') {
             steps {
                 script {
-                    sh "kubectl rollout status deployment/${KUBE_DEPLOYMENT} --namespace ${KUBE_NAMESPACE}"
+                    sh "kubectl rollout status deployment/${env.KUBE_DEPLOYMENT} --namespace ${env.KUBE_NAMESPACE}"
                 }
             }
         }
