@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: microproject-deployment
+  namespace: jenkins
 spec:
   replicas: 2
   selector:
@@ -13,8 +14,9 @@ spec:
         app: microproject
     spec:
       containers:
-      - name: microproject
-        image: lalithakashyap30/microproject:latest
-        ports:
-        - containerPort: 3000
+        - image: lalithakashyap30/microproject:latest
+          name: microproject
+          ports:
+            - containerPort: 3000
+
           
