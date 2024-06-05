@@ -33,7 +33,7 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 script {
-                    docker.withRegistry('https://index.docker.io/v1/', 'd0007677-f948-4f69-a27b-fd0f6eee42fc') {
+                    docker.withRegistry('https://index.docker.io/v1/', 'dckr_pat_gYGpAuh2xArUIiQR2EEkiL9tCTU') {
                         docker.image("${env.DOCKER_IMAGE}").push('latest')
                     }
                 }
