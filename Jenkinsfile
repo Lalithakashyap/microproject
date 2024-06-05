@@ -31,11 +31,10 @@ pipeline {
             }
         }
         stage('Push Docker Image') {
+            // This stage is not needed since we won't push the image to a Docker registry
             steps {
                 script {
-                    docker.withRegistry('https://index.docker.io/v1/') {
-                        docker.image("${env.DOCKER_IMAGE}").push('latest')
-                    }
+                    echo "Skipping image push stage"
                 }
             }
         }
@@ -54,4 +53,6 @@ pipeline {
             }
         }
     }
+}
+
 }
