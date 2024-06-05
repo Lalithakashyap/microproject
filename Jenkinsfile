@@ -41,7 +41,7 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 script {
-                    sh "kubectl apply -f kubernetes/deployment.yaml --namespace ${env.KUBE_NAMESPACE}"
+                    sh "kubectl apply -f minikubes/deployment.yaml --namespace ${env.KUBE_NAMESPACE}"
                 }
             }
         }
@@ -55,4 +55,3 @@ pipeline {
     }
 }
 
-}
