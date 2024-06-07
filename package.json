@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "build": "echo 'No build process required for this project'"
+    "build": "echo 'No build process required for this project'",
+    "test": "echo 'No tests defined for this project'"
   },
   "author": "lalithakashyap",
   "license": "ISC",
@@ -14,3 +15,4 @@
   },
   "keywords": []
 }
+
