@@ -5,18 +5,12 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "build": "tsc",                  // Assuming you have TypeScript installed and a tsconfig.json file
-    "test": "jest"                   // Assuming you have Jest installed and configured
+    "build": "echo 'No build process required for this project'"
   },
   "author": "lalithakashyap",
   "license": "ISC",
   "dependencies": {
     "express": "^4.19.2"
   },
-  "devDependencies": {
-    "typescript": "^4.4.3",
-    "jest": "^27.0.6"
-  },
   "keywords": []
 }
-
