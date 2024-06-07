@@ -6,6 +6,7 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  ingressClassName: nginx  # Update this line with the expected Ingress class name
   rules:
     - host: microproject.local
       http:
